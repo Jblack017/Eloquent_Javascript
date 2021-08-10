@@ -16,7 +16,11 @@
 // es6 function declaration that creates a functions which takes in a size and console.logs a final string.
 const chessboard = (size) => {
 
-    // initialize the first pattern of characters
+    // check to ensure input was a number
+    if(typeof size !== 'number'){
+        console.log(size, " is not a number")
+    } else {
+        // initialize the first pattern of characters
     let charArray = []
 
     // initialize bucket to hold stacked character patterns
@@ -41,6 +45,8 @@ const chessboard = (size) => {
 
     // console log a joined stacked char array
     console.log(stackedCharArray.join(''))
+    }
+
 }
 
 
